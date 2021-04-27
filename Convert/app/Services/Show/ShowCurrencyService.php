@@ -32,7 +32,8 @@ class ShowCurrencyService
         }
         $this->context = [
             'error' => $this->showCurrencyValidator->getError(),
-            'result' => $exchange.' '.$symbol
+            'result' => 'Conversation from '.$this->showCurrencyValidator->getAmount().
+                ' EUR: '.$exchange.' '.$symbol
         ];
     }
     public function getContext()
