@@ -18,6 +18,7 @@ class ShowCurrencyService
     public function execute(Request $request)
     {
         $exchange = '';
+        $symbol = '';
         if ($request->input('convert') !== null) {
             $symbol = $request->input('currencies');
             $this->showCurrencyValidator->validate($request);
